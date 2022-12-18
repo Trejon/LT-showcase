@@ -1,0 +1,23 @@
+{
+    "name": "lean-techniques-showcase",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bin": {
+        "photo-album4": "./bin/app.js"
+    },
+    "dependencies": {
+        "boxen": "4.0",
+        "chalk": "2.4",
+        "node-fetch": "^3.3.0"
+    },
+    "devDependencies": {
+        "jest": "^29.3.1"
+    }
+}
