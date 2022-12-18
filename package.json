@@ -2,15 +2,20 @@
     "name": "lean-techniques-showcase",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "./lib/app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
+        "build": "tsc -p .",
+        "create": "npm run build && npm run test",
+        "local": "sudo npm i -g && photo-album 1",
+        "typecheck": "tsc --watch",
+        "test": "jest"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bin": {
-        "photo-album4": "./bin/app.js"
+        "photo-album": "./lib/app.js"
     },
     "dependencies": {
         "boxen": "4.0",
@@ -18,6 +23,10 @@
         "node-fetch": "^3.3.0"
     },
     "devDependencies": {
-        "jest": "^29.3.1"
+        "@types/node": "^18.11.17",
+        "jest": "^29.3.1",
+        "nodemon": "^2.0.20",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.4"
     }
 }
