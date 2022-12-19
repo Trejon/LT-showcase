@@ -36,7 +36,7 @@ export const fetchAlbum = async (albumId: number) => {
     const baseUrl = 'https://jsonplaceholder.typicode.com/photos';
     try {
         const { data } = await axios.get(`${baseUrl}?albumId=${albumId}`);
-        if (data.length < 1) console.log('Sorry, there is nothing in this album.');
+        if (data.length < 1) colorLog('Sorry, there is nothing in this album.');
         return data.forEach((res: AlbumResponse) => colorLog(`[${res.id}] ${res.title}`));
     } catch (err) {
         if (axios.isAxiosError(err)) {
